@@ -60,3 +60,16 @@ Frontend currently includes auth, protected navigation shell, products/categorie
 - Stop: `powershell -ExecutionPolicy Bypass -File scripts\stop.ps1`
 
 These run `docker compose up -d db backend frontend` and `docker compose down`. Ensure Docker Desktop is running and `.env` is present.
+
+## DB inspection
+- Host: `localhost`, Port: `5432`, DB: `codex_pos`, User: `codex`, Password: `codex`.
+- Quick via container (no local psql needed):
+  - List tables: `docker compose exec db psql -U codex -d codex_pos -c "\dt"`
+  - Describe table: `docker compose exec db psql -U codex -d codex_pos -c "\d products"`
+  - Sample query: `docker compose exec db psql -U codex -d codex_pos -c "SELECT * FROM users;"`
+- If you have psql locally: `psql "postgresql://codex:codex@localhost:5432/codex_pos"`
+
+## Screenshots
+- `docs/images/ui-login.png` – Login screen.
+- `docs/images/ui-dashboard.png` – Dashboard overview (post-login).
+- `docs/images/ui-products.png` – Products page with CRUD controls.
