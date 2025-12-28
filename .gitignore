@@ -20,3 +20,6 @@ coverage/
 
 # Docker
 *.log
+
+# Local notes
+current_state.md
