@@ -70,6 +70,9 @@ These run `docker compose up -d db backend frontend` and `docker compose down`. 
 - If you have psql locally: `psql "postgresql://codex:codex@localhost:5432/codex_pos"`
 
 ## Screenshots
-- `docs/images/ui-login.png` – Login screen.
-- `docs/images/ui-dashboard.png` – Dashboard overview (post-login).
-- `docs/images/ui-products.png` – Products page with CRUD controls.
+![Login](docs/images/ui-login.png)
+![Dashboard](docs/images/ui-dashboard.png)
+![Products](docs/images/ui-products.png)
+![Inventory](docs/images/ui-inventory.png)
+![Orders](docs/images/ui-orders.png)
+![Reports](docs/images/ui-reports.png)
